@@ -18,6 +18,9 @@ void draw()
     if (mousePressed)
       bob[i].directedFly();
   }
+  fill(255);
+  if (get(mouseX, mouseY) !=color(255, 209, 220)){
+  text("don't pop the bubbles!", 200, 400);}
 }  
 class Bubble    
 {     
@@ -30,7 +33,7 @@ class Bubble
   void randomFly()
   {
     myX = myX + (int)(Math.random()*11)-5; 
-    myY = myY + (int)(Math.random()*6)-3; 
+    myY = myY + (int)(Math.random()*6)-3;
   }
   void directedFly()
   {
@@ -41,7 +44,7 @@ class Bubble
     else if (mouseY < myY)
       myY = myY + (int)(Math.random()*6)-2;
     else if (mouseY > myY)
-      myY = myY + (int)(Math.random()*10)+4;
+      myY = myY + (int)(Math.random()*10)+10;
   }
   void show()
   {
