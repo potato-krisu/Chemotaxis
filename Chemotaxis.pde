@@ -18,9 +18,13 @@ void draw()
     if (mousePressed)
       bob[i].directedFly();
   }
-  fill(255);
-  if (get(mouseX, mouseY) !=color(255, 209, 220)){
-  text("don't pop the bubbles!", 200, 400);}
+  fill(209, 255, 221);
+  rect(mouseX-2, mouseY-30, 5, 50);
+  ellipse(mouseX, mouseY-30, 20, 30);
+  fill(255, 209, 220);
+  ellipse(mouseX, mouseY-30, 15, 25);
+  //if (get(mouseX, mouseY) !=color(255, 209, 220)){
+  //text("don't pop the bubbles!", 200, 400);}
 }  
 class Bubble    
 {     
